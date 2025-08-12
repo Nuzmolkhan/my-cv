@@ -1,0 +1,25 @@
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - 'cv/**'
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup LaTeX environment and build PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv/main.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cv-pdf
+          path: cv/main.pdf
