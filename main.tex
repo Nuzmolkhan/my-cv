@@ -1,0 +1,189 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz} % circular photo
+\usepackage{xcolor} % colors
+\usepackage{fontawesome5} % icons
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=0pt}
+
+% ---------- Custom Commands ----------
+\newcommand{\buttonlink}[2]{%
+  \colorbox{gray!20}{\hyperref[#1]{\textcolor{black}{#2}}}%
+}
+
+\newcommand{\githubbutton}[2]{%
+  \colorbox{gray!20}{\href{#1}{\textcolor{black}{\faGithub\ #2}}}%
+}
+
+\newcommand{\portfoliobutton}[2]{%
+  \colorbox{gray!20}{\href{#1}{\textcolor{black}{\faGlobe\ #2}}}%
+}
+
+\newcommand{\cvsection}[2]{%
+  \section*{\textcolor{blue!50!black}{#1}}\label{#2}%
+  \vspace{4pt}%
+}
+
+\hypersetup{
+  pdftitle={Curriculum Vitae - Nuzmol Islam Khan},
+  pdfauthor={Nuzmol Islam Khan}
+}
+
+\begin{document}
+
+% -------------------- Header --------------------
+\begin{tabular}{@{}p{0.72\textwidth}@{}p{0.28\textwidth}@{}}
+\begin{minipage}[c]{\linewidth}
+    {\LARGE \textbf{Nuzmol Islam Khan}} \\[4pt]
+    \href{mailto:mdnuzmolislam30@gmail.com}{mdnuzmolislam30@gmail.com} \; | \; +880-1986822599 \\
+    \href{https://www.linkedin.com/in/mdnuzmol}{\faLinkedin\ mdnuzmol} \; | \;
+    \href{https://github.com/Nuzmolkhan}{\faGithub\ Nuzmolkhan}
+\end{minipage} &
+\begin{minipage}[c]{\linewidth}
+    \raggedleft
+    \begin{tikzpicture}
+        \clip (0,0) circle (1.5cm);
+        \node at (0,0) {\includegraphics[width=3cm]{Profile picture.png}};
+    \end{tikzpicture}
+\end{minipage}
+\end{tabular}
+
+\vspace{8pt}
+
+% -------------------- TOC Buttons --------------------
+\noindent
+\buttonlink{sec:summary}{Summary} \hspace{3pt}
+\buttonlink{sec:skills}{Skills} \hspace{3pt}
+\buttonlink{sec:projects}{Projects} \hspace{3pt}
+\buttonlink{sec:experience}{Experience} \hspace{3pt}
+\buttonlink{sec:education}{Education} \hspace{3pt}
+\buttonlink{sec:personal}{Personal Details} \hspace{3pt}
+\buttonlink{sec:learning}{Skills \& Learning}
+
+\vspace{8pt}
+
+% -------------------- Sections --------------------
+\cvsection{Professional Summary}{sec:summary}
+Aspiring Data Analyst and Frontend Developer with skills in Python, SQL, Excel, and web technologies (HTML, Tailwind CSS, JavaScript). Experienced in cleaning and analyzing datasets, creating interactive dashboards, and developing responsive web apps.
+
+\cvsection{Technical Skills}{sec:skills}
+\begin{tabular}{p{3.3cm} p{12cm}}
+\textbf{Data:} & SQL, Excel \\
+\textbf{Web:} & HTML5, CSS3, Tailwind CSS, JavaScript (ES6), Responsive Design \\
+\textbf{Programming Languages:} & C, C++, JAVA, JavaScript (ES6), Python, PHP \\
+\textbf{DB / Tools:} & MySQL, Git, LaTeX, VScode, MS Powerpoint, MS Word \\
+\end{tabular}
+
+\cvsection{Soft Skills}{sec:softskills}
+\begin{itemize}[label={\faCheckCircle}]
+  \item Detail-Oriented  
+  \item Clear Communication  
+  \item Team Collaboration  
+  \item Process-Focused \& Organized  
+  \item Analytical Problem-Solving  
+  \item Adaptable \& Flexible  
+  \item Accountability \& Ownership  
+\end{itemize}
+
+\cvsection{Projects}{sec:projects}
+\textbf{My Portfolio Website} 
+\portfoliobutton{https://nuzmols-3d-canvas.lovable.app}{Portfolio Website} \\
+Summary: A personal portfolio website showcasing my projects and skills with an interactive 3D canvas background. \\
+
+\vspace{4pt}
+\textbf{SQL Business Analytics Project} 
+\githubbutton{https://github.com/Nuzmolkhan/sql-sales-customer-product-insights}{GitHub} \\
+Tools: SQL (T-SQL), SQL Server \\
+Summary: Designed SQL queries on a star-schema sales dataset to analyze customer behavior, product performance, and overall sales trends. Built reports on KPIs like recency, average order value and so on. \\
+
+\vspace{4pt}
+\textbf{Sales Data Analysis} 
+\githubbutton{https://github.com/Nuzmolkhan/sales_data_analysis}{GitHub} \\
+Tools: SQL, MySQL / SQL Server \\
+Summary: Built SQL views on the Superstore dataset to analyze sales, customers, and products, providing actionable business insights. \\
+
+\vspace{4pt}
+\textbf{E-commerce Website front-end development} 
+\githubbutton{https://github.com/Nuzmolkhan/Online-Shopping-website-front-end-designing-using-html-tailwindcss}{GitHub} \\
+Tools: HTML5, Tailwind CSS, IDE: VScode \\
+Summary: Developed a multi-page front-end e-commerce website with product listings and user authentication. \\[2pt]
+\colorbox{gray!20}{\href{https://nuzmolkhan.github.io/Online-Shopping-website-front-end-designing-using-html-tailwindcss/index.html}{\textcolor{black}{Live Demo}}}
+
+\vspace{4pt}
+\textbf{Online social media homepage with dynamic post creation} 
+\githubbutton{https://github.com/Nuzmolkhan/Facebook-home-web-page-with-dynamic-post-creation}{GitHub} \\
+Tools: HTML5, CSS3, Javascipt, IDE: VScode \\
+Summary: Built a dynamic social media homepage allowing users to create and interact with post. \\[2pt]
+\colorbox{gray!20}{\href{https://nuzmolkhan.github.io/Facebook-home-web-page-with-dynamic-post-creation/}{\textcolor{black}{Live Demo}}}
+
+% -------------------- Experience --------------------
+\cvsection{Experience}{sec:experience}
+
+\textbf{Front-end Developer Intern} \\
+\colorbox{gray!20}{\href{https://robotechvalley.com/}{Robo Tech Valley}} \; | \; $1^{\text{st}}$ March 25 -- $30^{\text{th}}$ May 25 (3 months) \\
+\begin{itemize}
+  \item Developed a responsive front-end web application using HTML, Tailwind CSS, and JavaScript.
+  \item Implemented interactive UI components and ensured mobile-first responsive design.
+  \item Optimized layout and styling for better user experience and cross-browser compatibility.
+  \item Collaborated with backend team to integrate APIs and dynamic content.
+\end{itemize}
+
+% -------------------- Education --------------------
+\cvsection{Education}{sec:education}
+
+\begin{tabular}{p{12cm} r}
+\textbf{B.Sc. in Computer Science \& Engineering} & CGPA: 3.39/4.00 \\
+Green University of Bangladesh, Narayanganj & Oct 2020 -- July 2025 \\[2mm]
+\textbf{HSC (Higher Secondary Certificate)} & GPA: 3.67/5.00 \\
+Bikalpa Model College, Dhaka & June 2019 \\[2mm]
+\textbf{SSC (Secondary School Certificate)} & GPA: 4.78/5.00 \\
+Bairagirchala High School, Gazipur & April 2016 \\
+\end{tabular}
+
+% -------------------- Personal Details --------------------
+\cvsection{Personal Details}{sec:personal}
+
+\begin{tabular}{p{6cm} p{10cm}}
+\textbf{Name:} & Nuzmol Islam Khan \\
+\textbf{Age:} & 26 \\
+\textbf{Date of Birth:} & 30 April 1999 \\
+\textbf{Nationality:} & Bangladeshi \\
+\textbf{NID:} & 6923581042 \\
+\textbf{Marital Status:} & Unmarried \\
+\textbf{Gender:} & Male \\
+\textbf{Phone:} & +880-1986822599 \\
+\textbf{Email:} & \href{mailto:mdnuzmolislam30@gmail.com}{mdnuzmolislam30@gmail.com} \\
+\textbf{Permanent Address:} & 313 Wilson Road, Nabiganj, Bandar, Narayanganj \\
+\textbf{Present Address:} & Same as Permanent Address \\
+\end{tabular}
+
+% -------------------- Skills & Learning --------------------
+\cvsection{Skills \& Learning}{sec:learning}
+\begin{itemize}
+  \item Proficient in SQL (self-taught via YouTube tutorials)
+  \item Strong understanding of Excel, and Data Analysis
+  \item Hands-on experience in Frontend Web Development using HTML, CSS, Tailwind, JavaScript
+\end{itemize}
+
+% -------------------- Awards --------------------
+\cvsection{Awards \& Achievements}{sec:awards}
+
+\textbf{Academic Excellence} \\
+-- Received Vice Chancellor's Award for achieving 4.00/4.00 CGPA. \\[1mm]
+
+\textbf{Coding Challenge} \\
+-- Completed 50-days SQL LeetCode Challenge, recognized for consistent problem-solving and proficiency.
+
+\vspace{14pt}
+
+% -------------------- Closing Message & Signature --------------------
+\vspace{10pt}
+\text{Thank you for reviewing my resume. I am always eager to learn, contribute, and grow in the field of Data Analytics and front-end web applications to create interactive dashboards.}\\[3pt]
+\textbf{Sincerely,} \\[6pt]
+\includegraphics[width=4cm]{Signature.jpg} \\ % Optional signature image
+\textbf{Nuzmol Islam Khan}
+
+\end{document}
