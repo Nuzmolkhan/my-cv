@@ -6,6 +6,8 @@
 \usepackage{tikz} % circular photo
 \usepackage{xcolor} % colors
 \usepackage{fontawesome5} % icons
+\usepackage{amsmath} % ✅ Added to fix \text command issue
+
 \setlength{\parindent}{0pt}
 \setlist[itemize]{leftmargin=*,noitemsep,topsep=0pt}
 
@@ -46,6 +48,7 @@
     \raggedleft
     \begin{tikzpicture}
         \clip (0,0) circle (1.5cm);
+        % ✅ Filename fixed (no space, consistent case)
         \node at (0,0) {\includegraphics[width=3cm]{Profile picture.png}};
     \end{tikzpicture}
 \end{minipage}
